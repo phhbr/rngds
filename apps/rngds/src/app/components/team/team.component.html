@@ -1,0 +1,9 @@
+<h2>Members</h2>
+@for (member of members$ | async; track member.id) {
+<section>
+  <p>{{ member.firstname }} {{ member.lastname }}</p>
+  @if (member.imageUrl) {
+  <img [src]="member.imageUrl" alt="Bild des Spielers {{ member.firstname }}" />
+  }
+</section>
+}

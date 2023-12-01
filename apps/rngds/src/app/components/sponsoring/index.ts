@@ -1,0 +1,1 @@
+export { SponsoringComponent  } from './sponsoring.component';
