@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import './assets/scss/reset';
+@import './scss/_colors';
+@import './scss/_fonts';
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Roboto', sans-serif;
+}

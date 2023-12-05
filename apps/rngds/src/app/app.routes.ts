@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: '',
+    path: 'home',
     loadComponent: () =>
       import('@rngds/home').then((component) => component.HomeComponent),
   },
@@ -30,5 +30,15 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@rngds/contact').then((component) => component.ContactComponent),
   },
-  { path: '**', redirectTo: '/' },
+  {
+    path: 'imprint',
+    loadComponent: () =>
+      import('@rngds/imprint').then((component) => component.ImprintComponent),
+  },
+  {
+    path: 'privacy',
+    loadComponent: () =>
+      import('@rngds/privacy').then((component) => component.PrivacyComponent),
+  },
+  { path: '**', redirectTo: '/home' },
 ];

@@ -1,11 +1,20 @@
 <header>
-  <h1 class="sr-only">Nuernberg Renegades</h1>
-  <img
-    src="https://sojbecommfeabelnhqjt.supabase.co/storage/v1/object/public/images/Logo_Header.png"
-    alt="Nuernberg Renegades Logo. Ein Football mit dem Schriftzug 'Nürnberg Renegades'"
-  />
-  <nav>
-    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"
+  <div class="filler"></div>
+  <div class="image-wrapper">
+    <img
+      class="logo"
+      fetchpriority="high"
+      height="auto"
+      width="124"
+      src="https://sojbecommfeabelnhqjt.supabase.co/storage/v1/object/public/images/logo-renegades-avatar.png"
+      alt="Nürnberg Renegades Logo. Ein Football mit dem Schriftzug 'Nürnberg Renegades'"
+    />
+  </div>
+  <div class="filler"></div>
+
+  <h1>Nürnberg Renegades e.V.</h1>
+  <nav [ngClass]="menuIsOpen ? 'mobile-open' : 'mobile-closed'">
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
       >Home</a
     >
     <a routerLink="/team" routerLinkActive="active" ariaCurrentWhenActive="page"
@@ -30,4 +39,12 @@
       >Kontakt</a
     >
   </nav>
+  <button
+    type="button"
+    aria-label="Open Navigation"
+    class="mobile-only"
+    (click)="toggleMobileNavigation()"
+  >
+    Open Navigation
+  </button>
 </header>

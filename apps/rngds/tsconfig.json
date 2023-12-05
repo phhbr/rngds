@@ -13,8 +13,10 @@
       "@rngds/header": ["apps/rngds//src/app/components/header/index.ts"],
       "@rngds/footer": ["apps/rngds//src/app/components/footer/index.ts"],
       "@rngds/home": ["apps/rngds//src/app/components/home/index.ts"],
+      "@rngds/imprint": ["apps/rngds//src/app/components/imprint/index.ts"],
       "@rngds/team": ["apps/rngds//src/app/components/team/index.ts"],
       "@rngds/training": ["apps/rngds//src/app/components/training/index.ts"],
+      "@rngds/privacy": ["apps/rngds//src/app/components/privacy/index.ts"],
       "@rngds/sponsoring": [
         "apps/rngds//src/app/components/sponsoring/index.ts"
       ],

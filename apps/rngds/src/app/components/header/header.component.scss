@@ -1,0 +1,113 @@
+$height-header: 108px;
+$height-nav-bar: 72px;
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    height: #{$height-header};
+    margin: 1% 5%;
+    gap: 4rem;
+
+    h1 {
+      align-self: center;
+      font-size: x-large;
+      flex-basis: 290px;
+    }
+
+    div.filler {
+      flex: 1 1 auto;
+    }
+
+    div.image-wrapper {
+      align-self: center;
+      height: 100%;
+    }
+
+    nav {
+      align-self: center;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: nowrap;
+      height: #{$height-nav-bar};
+      min-width: #{$height-nav-bar};
+
+      a {
+        display: inline-flex;
+        justify-content: center;
+        height: 100%;
+        text-transform: uppercase;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        padding: 0 1rem;
+        color: var(--color-primary);
+        align-content: center;
+        flex-wrap: wrap;
+      }
+
+      a:hover {
+        border-color: var(--color-primary);
+      }
+
+      a.active {
+        background-color: var(--color-primary);
+        color: var(--color-text-dark);
+        border-color: var(--color-primary);
+      }
+    }
+
+    .mobile-only {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .mobile-only,
+  .mobile-open {
+    display: block;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.filler {
+    display: none;
+  }
+
+  h1 {
+    font-size: small;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* Style the navigation menu */
+  nav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+
+  /* Style navigation menu links */
+  nav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  /* Add a grey background color on mouse-over */
+  nav a:hover {
+    background-color: var(--color-primary);
+    color: black;
+  }
+
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: var(--color-primary);
+    color: black;
+  }
+}
